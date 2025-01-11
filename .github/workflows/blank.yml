@@ -14,8 +14,3 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Executando comando diretamente no PowerShell
-        shell: pwsh
-        run: |
-          Write-Output "Olá, mundo! Este é o meu primeiro job no GitHub Actions"
