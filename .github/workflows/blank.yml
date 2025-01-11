@@ -4,16 +4,16 @@ name: Teste Workflow Daniel
 # Definindo quando o workflow será disparado
 on:
   push:
-      branches: [main]
+    branches: [main]
 
 # Definindo os jobs que o workflow executará
 jobs:
   test_job:
-      name: Executando job de teste
-      runs-on: self-hosted
-      steps:
-        - name: Checkout code
+    name: Executando job de teste
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v2
 
-        - name: Executando um comando simples
-        run: echo "Olá, mundo! Este é o meu primeiro job no GitHub Actions"      
+      - name: Executando um comando simples
+        run: echo "Olá, mundo! Este é o meu primeiro job no GitHub Actions"
