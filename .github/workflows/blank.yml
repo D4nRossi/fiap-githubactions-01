@@ -14,3 +14,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Docker Login
+        uses: docker/login-action@v3.3.0
+        with:
+          username: 'danrossi02'
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
+          
