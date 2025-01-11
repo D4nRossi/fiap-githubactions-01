@@ -15,8 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Alterando política de execução
-        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-
-      - name: Executando um comando simples
-        run: echo "Olá, mundo! Este é o meu primeiro job no GitHub Actions"
+      - name: Executando comando diretamente no PowerShell
+        shell: pwsh
+        run: |
+          Write-Output "Olá, mundo! Este é o meu primeiro job no GitHub Actions"
